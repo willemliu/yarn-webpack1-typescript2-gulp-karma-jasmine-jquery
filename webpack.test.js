@@ -13,13 +13,13 @@ module.exports = {
   plugins: [
     new webpack.SourceMapDevToolPlugin({
       filename: null, // if no value is provided the sourcemap is inlined
-      test: /\.(tsx?|js)($|\?)/i // process .js, .tsx and .ts files only
+      test: /\.(ts|js)x?$/i // process .js, .tsx and .ts files only
     })
   ],
   module: {
     loaders: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.tsx?$/, loader: 'ts-loader' }
+      { test: /\.tsx?$/i, loader: 'ts-loader' }
     ]
   }
 };

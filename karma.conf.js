@@ -15,7 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: 'test/**/*.ts', watched: false, included: true }
+      'test-main.js',
+      { pattern: 'test/**/*', watched: false, included: true }
     ],
 
     // list of files to exclude
@@ -25,8 +26,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/**/*.ts': ['webpack', 'coverage'],
-      'test/**/*.ts': ['webpack', 'sourcemap']
+      'src/**/*': ['webpack', 'sourcemap', 'coverage'],
+      'test/**/*': ['webpack', 'sourcemap']
     },
     
     webpack: {
