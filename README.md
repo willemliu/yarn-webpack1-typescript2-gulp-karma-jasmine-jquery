@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/willemliu/yarn-webpack1-typescript2-gulp-karma-jasmine-jquery.svg?branch=master)](https://travis-ci.org/willemliu/yarn-webpack1-typescript2-gulp-karma-jasmine-jquery)
+[![Coverage Status](https://coveralls.io/repos/github/willemliu/yarn-webpack1-typescript2-gulp-karma-jasmine-jquery/badge.svg?branch=master)](https://coveralls.io/github/willemliu/yarn-webpack1-typescript2-gulp-karma-jasmine-jquery?branch=master)
+
 # yarn-webpack1-typescript2-karma-jasmine-jquery
 Using Webpack 1 to bundle TypeScript 2 files.
 This project is an example on how to setup Unit Testing in a TypeScript 2 project using Karma as test runner and Jasmine as test framework.
