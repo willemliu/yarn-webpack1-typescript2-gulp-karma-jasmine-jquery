@@ -31,16 +31,7 @@ module.exports = function(config) {
       'test/**/*': ['webpack', 'sourcemap']
     },
     
-    webpack: {
-      devtool: webpackConfig.devtool,
-      debug: false,
-      plugins: webpackConfig.plugins,
-      module: webpackConfig.module,
-      resolve: webpackConfig.resolve,
-      externals: {
-        "jquery": "jQuery"
-      }
-    },
+    webpack: webpackConfig,
     // Webpack please don't spam the console when running in karma!
     webpackServer: { noInfo: true },
     

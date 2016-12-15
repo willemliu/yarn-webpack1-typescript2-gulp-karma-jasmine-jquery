@@ -3,10 +3,6 @@ const webpack = require("webpack");
 module.exports = {
 
   devtool: "source-map",
-  entry: "./src/main.ts",
-  output: {
-    filename: "main.js"
-  },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.js', '.ts', '.tsx']
   },
@@ -29,5 +25,9 @@ module.exports = {
           loader: 'istanbul-instrumenter-loader'
       }
     ]
+  },
+  externals: {
+    "jquery": "jQuery"
   }
+
 };
