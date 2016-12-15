@@ -16,6 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'test-main.js',
+      { pattern: 'node_modules/jquery/dist/jquery.js', watched: false, included: true },
       { pattern: 'test/**/*', watched: false, included: true }
     ],
 
@@ -35,7 +36,10 @@ module.exports = function(config) {
       debug: false,
       plugins: webpackConfig.plugins,
       module: webpackConfig.module,
-      resolve: webpackConfig.resolve
+      resolve: webpackConfig.resolve,
+      externals: {
+        "jquery": "jQuery"
+      }
     },
     // Webpack please don't spam the console when running in karma!
     webpackServer: { noInfo: true },

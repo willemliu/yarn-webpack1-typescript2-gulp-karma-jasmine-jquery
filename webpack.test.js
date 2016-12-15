@@ -20,6 +20,14 @@ module.exports = {
     loaders: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.tsx?$/i, loader: 'ts-loader' }
+    ],
+    postLoaders: [
+      {
+          test: /\.tsx?$/i,
+          include: /(src)/,
+          exclude: /(node_modules|resources\/js\/vendor)/,
+          loader: 'istanbul-instrumenter-loader'
+      }
     ]
   }
 };
